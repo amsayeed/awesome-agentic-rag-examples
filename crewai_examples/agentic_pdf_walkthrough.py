@@ -2,12 +2,9 @@
 """
 Enhanced CrewAI Agentic PDF Processing Pipeline
 
-This module demonstrates a comprehensive agentic RAG pipeline using CrewAI for processing
+Agentic RAG pipeline using CrewAI for processing
 PDF documents with multiple specialized agents working in coordination.
 
-Authors: CrewAI Community
-Version: 1.0.0
-License: MIT
 """
 
 import os
