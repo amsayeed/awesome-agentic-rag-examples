@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 """
-Enhanced CrewAI Agentic PDF Processing Pipeline
+CrewAI Agentic PDF Processing Pipeline
 
 Agentic RAG pipeline using CrewAI for processing
 PDF documents with multiple specialized agents working in coordination.
