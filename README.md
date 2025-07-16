@@ -69,55 +69,55 @@ This repository bridges the gap between academic concepts and practical implemen
 ## 📋 Example Categories
 
 ### 🏃‍♂️ Beginner Examples
+
 - **Basic Agentic RAG**: Simple two-agent system (retriever + grader)
 - **Question Answering Bot**: Enhanced Q&A with context validation
 - **Document Summarizer**: Multi-step summarization with quality checks
 
 ### 🚀 Intermediate Examples
+
 - **Multi-Source RAG**: Agents coordinating across different data sources
 - **Conversational RAG**: Context-aware multi-turn conversations
 - **Code Analysis Agent**: Specialized agents for code understanding and generation
 
 ### 🎓 Advanced Examples
+
 - **Research Assistant**: Complex workflows with literature review capabilities
 - **Enterprise RAG**: Production-scale system with monitoring and fallbacks
 - **Multi-Modal Agents**: Handling text, images, and structured data
 
 ### 🔧 Framework-Specific Examples
+
 - **LangChain Implementations**: Leveraging LangChain's agent ecosystem
 - **CrewAI Workflows**: Team-based agent coordination patterns
 - **Custom Agent Frameworks**: Building your own agent orchestration
 
 ## 🛣️ Roadmap
 
-### Q1 2025 ✅
-- [x] Repository setup and initial examples
-- [x] Basic documentation structure
-- [ ] LangChain-based examples (3-4 implementations)
-- [ ] Getting started tutorial notebook
-- [ ] CI/CD pipeline setup
+Our development roadmap focuses on practical, example-driven implementations that demonstrate real-world agentic RAG patterns:
 
-### Q2 2025 🎯
-- [ ] CrewAI integration examples
-- [ ] Advanced multi-agent workflows
-- [ ] Performance benchmarking suite
-- [ ] Production deployment guides
-- [ ] Community contribution guidelines
+### ✅ Current Status
+- **CrewAI Multi-Agent PDF Pipeline**: Complete example showcasing team-based document processing with specialized agents for extraction, analysis, and synthesis
+- **Repository Foundation**: Core structure, documentation framework, and initial examples established
+- **Development Workflow**: CI/CD pipeline and contribution guidelines in place
 
-### Q3 2025 🚀
-- [ ] Multi-modal agent examples
-- [ ] Enterprise-scale patterns
-- [ ] Monitoring and observability tools
-- [ ] Integration with popular vector databases
-- [ ] Real-world case studies
+### 🎯 Next: LangChain Agentic Examples
+- **Advanced RAG Workflows**: Multi-step reasoning chains with agent coordination
+- **Self-Correcting Retrieval**: Agents that evaluate and refine their own search strategies
+- **Context-Aware Conversations**: Stateful multi-turn dialogues with memory management
+- **Tool-Using Agents**: Integration with external APIs and databases
 
-### Q4 2025 🌟
-- [ ] Custom agent framework development
-- [ ] Advanced evaluation metrics
-- [ ] Research collaboration features
-- [ ] Conference presentations and workshops
-- [ ] Community showcase projects
+### 🚀 Planned: Agent Orchestration Demos
+- **Intermediate Complexity**: Multi-modal agents handling text, images, and structured data
+- **Advanced Patterns**: Enterprise-scale workflows with monitoring, fallbacks, and distributed processing
+- **Performance Benchmarking**: Comprehensive evaluation suites and optimization strategies
+- **Real-World Case Studies**: Production deployment patterns and lessons learned
 
+### 🔧 Ongoing: Quality & Community
+- **Continuous Testing**: Automated validation of examples against latest framework versions
+- **Documentation Enhancement**: Tutorial notebooks, API references, and best practices guides
+- **Community Support**: Issue triage, pull request reviews, and feature request evaluation
+- **Framework Updates**: Regular updates to support new releases of LangChain, CrewAI, and other tools
 
 ### 🎯 Contribution Areas
 
@@ -127,5 +127,3 @@ This repository bridges the gap between academic concepts and practical implemen
 - **🧪 Testing**: Add test cases and improve coverage
 - **🎨 UI/UX**: Improve notebooks and visualization
 - **🔧 Infrastructure**: CI/CD, deployment, and tooling improvements
-
-
