@@ -252,10 +252,6 @@ class WebSearchTool(BaseTool):
 - [LangChain PDF Processing](https://python.langchain.com/docs/modules/data_connection/document_loaders/pdf)
 - [Vector Stores Guide](https://python.langchain.com/docs/modules/data_connection/vectorstores/)
 
-### Best Practices
-- [Agentic RAG Design Patterns](../../docs/best_practices.md)
-- [Production Deployment Guide](../../docs/deployment.md)
-- [Monitoring and Observability](../../docs/monitoring.md)
 
 
 ### Ideas
