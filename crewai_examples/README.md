@@ -240,20 +240,6 @@ class WebSearchTool(BaseTool):
 - **Temperature**: Lower (0.0-0.2) for factual analysis, higher (0.3-0.7) for creative insights
 - **Token Limits**: Adjust based on document complexity and desired detail level
 
-## 📚 Additional Resources
-
-### CrewAI Documentation
-- [Official CrewAI Documentation](https://docs.crewai.com/)
-- [CrewAI GitHub Repository](https://github.com/joaomdmoura/crewAI)
-- [CrewAI Examples and Tutorials](https://github.com/joaomdmoura/crewAI-examples)
-
-### LangChain Integration
-- [LangChain Documentation](https://python.langchain.com/)
-- [LangChain PDF Processing](https://python.langchain.com/docs/modules/data_connection/document_loaders/pdf)
-- [Vector Stores Guide](https://python.langchain.com/docs/modules/data_connection/vectorstores/)
-
-
-
 ### Ideas
 - New agent types (e.g., Citation Agent, Fact-Checker Agent)
 - Integration with other document formats (Word, PowerPoint, etc.)
