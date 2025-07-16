@@ -66,16 +66,6 @@ This repository bridges the gap between academic concepts and practical implemen
    python examples/basic_agentic_rag/main.py
    ```
 
-### 📓 Interactive Tutorial
-
-**Coming Soon!** 🎉 We're preparing a comprehensive Jupyter notebook that will walk you through:
-- Setting up your first agentic RAG pipeline
-- Understanding agent roles and interactions
-- Implementing custom grading mechanisms
-- Deploying to production environments
-
-Stay tuned for `tutorial/agentic_rag_walkthrough.ipynb`!
-
 ## 📋 Example Categories
 
 ### 🏃‍♂️ Beginner Examples
@@ -128,19 +118,6 @@ Stay tuned for `tutorial/agentic_rag_walkthrough.ipynb`!
 - [ ] Conference presentations and workshops
 - [ ] Community showcase projects
 
-## 🤝 Contributing
-
-We welcome contributions from the community! Whether you're a beginner or an expert, there are many ways to help:
-
-### 🌟 How to Contribute
-
-1. **⭐ Star this repository** to show your support
-2. **🍴 Fork the repository** to your GitHub account
-3. **🔧 Create a feature branch**: `git checkout -b feature/amazing-new-example`
-4. **✨ Make your changes** and add tests if applicable
-5. **📝 Commit your changes**: `git commit -m 'Add amazing new agentic RAG example'`
-6. **📤 Push to your fork**: `git push origin feature/amazing-new-example`
-7. **🔄 Create a Pull Request** with a clear description of your changes
 
 ### 🎯 Contribution Areas
 
@@ -151,108 +128,4 @@ We welcome contributions from the community! Whether you're a beginner or an exp
 - **🎨 UI/UX**: Improve notebooks and visualization
 - **🔧 Infrastructure**: CI/CD, deployment, and tooling improvements
 
-### 📋 Contribution Guidelines
 
-1. **Code Quality**
-   - Follow PEP 8 style guidelines
-   - Include docstrings for functions and classes
-   - Add type hints where appropriate
-   - Ensure code is well-commented
-
-2. **Testing**
-   - Write unit tests for new functionality
-   - Ensure all tests pass before submitting
-   - Include integration tests for complex workflows
-
-3. **Documentation**
-   - Update README.md if adding new examples
-   - Include inline comments explaining complex logic
-   - Add example usage in docstrings
-
-4. **Pull Request Process**
-   - Fill out the PR template completely
-   - Link any relevant issues
-   - Request review from maintainers
-   - Address feedback promptly
-
-### 🏷️ Good First Issues
-
-Look for issues labeled `good first issue` or `help wanted` to get started. These are typically:
-- Documentation improvements
-- Simple bug fixes
-- Adding examples for new frameworks
-- Improving error messages
-
-## 📁 Repository Structure
-
-```
-awesome-agentic-rag-examples/
-├── examples/
-│   ├── basic_agentic_rag/        # Simple agent coordination
-│   ├── langchain_examples/       # LangChain-based implementations
-│   ├── crewai_examples/          # CrewAI team workflows
-│   ├── advanced_workflows/       # Complex multi-agent systems
-│   └── production_examples/      # Enterprise-ready patterns
-├── tutorial/
-│   ├── agentic_rag_walkthrough.ipynb  # Interactive tutorial (coming soon)
-│   └── concepts/                 # Conceptual explanations
-├── utils/
-│   ├── agent_base.py            # Common agent utilities
-│   ├── evaluation.py            # Grading and metrics
-│   └── monitoring.py            # Logging and observability
-├── tests/
-│   ├── unit/                    # Unit tests
-│   └── integration/             # Integration tests
-├── docs/
-│   ├── deployment.md            # Production deployment guide
-│   ├── best_practices.md        # Design patterns and tips
-│   └── troubleshooting.md       # Common issues and solutions
-├── requirements.txt             # Project dependencies
-├── .env.example                 # Environment variable template
-└── README.md                    # You are here!
-```
-
-## 📚 Resources & References
-
-### 📖 Essential Reading
-- [RAG Fundamentals](https://arxiv.org/abs/2005.11401) - The foundational paper
-- [LangChain Documentation](https://python.langchain.com/) - Framework documentation
-- [CrewAI Guide](https://docs.crewai.com/) - Multi-agent coordination
-
-### 🎥 Video Tutorials
-- [Building Your First Agent](link-coming-soon) - YouTube walkthrough
-- [Production RAG Patterns](link-coming-soon) - Advanced deployment strategies
-
-### 🔗 Related Projects
-- [LangChain](https://github.com/langchain-ai/langchain) - Building applications with LLMs
-- [CrewAI](https://github.com/joaomdmoura/crewAI) - Framework for orchestrating agents
-- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) - Autonomous GPT-4 experiments
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- The LangChain community for excellent frameworks and documentation
-- CrewAI contributors for innovative multi-agent patterns
-- All the researchers and practitioners advancing the field of Agentic AI
-- Our contributors who make this project better every day
-
-## 📬 Contact & Support
-
-- **📧 Email**: [amsayeed@example.com](mailto:amsayeed@example.com)
-- **🐦 Twitter**: [@amsayeed](https://twitter.com/amsayeed)
-- **💼 LinkedIn**: [Abdullah Sayeed](https://linkedin.com/in/amsayeed)
-- **🐛 Issues**: [GitHub Issues](https://github.com/amsayeed/awesome-agentic-rag-examples/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/amsayeed/awesome-agentic-rag-examples/discussions)
-
----
-
-<div align="center">
-
-**⭐ If you find this project helpful, please consider giving it a star! ⭐**
-
-*Built with ❤️ for the AI community*
-
-</div>
