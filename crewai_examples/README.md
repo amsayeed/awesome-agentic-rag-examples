@@ -257,33 +257,11 @@ class WebSearchTool(BaseTool):
 - [Production Deployment Guide](../../docs/deployment.md)
 - [Monitoring and Observability](../../docs/monitoring.md)
 
-## 🤝 Contributing
 
-We welcome contributions to improve and extend these examples:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/new-agent-example`
-3. **Add your example** with proper documentation
-4. **Write tests** for your implementation
-5. **Submit a pull request** with a clear description
-
-### Contribution Ideas
+### Ideas
 - New agent types (e.g., Citation Agent, Fact-Checker Agent)
 - Integration with other document formats (Word, PowerPoint, etc.)
 - Advanced visualization of agent interactions
 - Performance benchmarking tools
 - Multi-language support
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
-
-## 🙋‍♂️ Support
-
-- **Issues**: [GitHub Issues](https://github.com/amsayeed/awesome-agentic-rag-examples/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/amsayeed/awesome-agentic-rag-examples/discussions)
-- **Email**: [amsayeed@example.com](mailto:amsayeed@example.com)
-
----
-
-Built with ❤️ for the AI community using CrewAI and LangChain
