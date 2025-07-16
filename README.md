@@ -61,10 +61,6 @@ This repository bridges the gap between academic concepts and practical implemen
    # Edit .env with your API keys and configuration
    ```
 
-5. **Run your first example**
-   ```bash
-   python examples/basic_agentic_rag/main.py
-   ```
 
 ## 📋 Example Categories
 
@@ -98,6 +94,7 @@ Our development roadmap focuses on practical, example-driven implementations tha
 
 ### ✅ Current Status
 - **CrewAI Multi-Agent PDF Pipeline**: Complete example showcasing team-based document processing with specialized agents for extraction, analysis, and synthesis
+- **LlamaIndex Advanced Agentic RAG**: Interactive demo with ReAct agents, multiple tools (search, calculator, summarizer), and Streamlit UI for exploring agentic patterns
 - **Repository Foundation**: Core structure, documentation framework, and initial examples established
 - **Development Workflow**: CI/CD pipeline and contribution guidelines in place
 
@@ -119,11 +116,29 @@ Our development roadmap focuses on practical, example-driven implementations tha
 - **Community Support**: Issue triage, pull request reviews, and feature request evaluation
 - **Framework Updates**: Regular updates to support new releases of LangChain, CrewAI, and other tools
 
-### 🎯 Contribution Areas
 
-- **📚 New Examples**: Implement novel agentic RAG patterns
-- **🐛 Bug Fixes**: Help us improve existing code
-- **📖 Documentation**: Enhance explanations and tutorials
-- **🧪 Testing**: Add test cases and improve coverage
-- **🎨 UI/UX**: Improve notebooks and visualization
-- **🔧 Infrastructure**: CI/CD, deployment, and tooling improvements
+
+## 📚 Example Implementations
+
+### 1. CrewAI Multi-Agent PDF Analyzer
+Located in `crewai_examples/`
+
+A sophisticated multi-agent system that:
+- 📄 **Extracts** content from PDFs using specialized extraction agents
+- 🔍 **Analyzes** extracted data with domain-specific expert agents
+- 📊 **Synthesizes** findings into comprehensive reports
+- 🎯 **Validates** results through quality assurance agents
+
+[View CrewAI Example →](./crewai_examples/)
+
+### 2. LlamaIndex Advanced Agentic RAG
+Located in `llamaindex-rag/`
+
+An interactive demonstration featuring:
+- 🤖 **ReAct Agent**: Reasoning and acting pattern for intelligent responses
+- 🛠️ **Multiple Tools**: Knowledge search, calculator, joke generator, and summarizer
+- 💾 **Memory System**: Contextual conversation tracking
+- 🎨 **Streamlit UI**: User-friendly interface for exploration
+- 📚 **Pre-loaded Knowledge Base**: Ready-to-use AI and RAG documentation
+
+[View LlamaIndex Example →](./llamaindex-rag/)

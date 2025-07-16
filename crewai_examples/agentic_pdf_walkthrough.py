@@ -15,11 +15,10 @@ from pathlib import Path
 # Core CrewAI imports
 from crewai import Agent, Task, Crew, Process
 from crewai.tools import BaseTool
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.llms import OpenAI
+from langchain_community.vectorstores import FAISS
+from langchain_openai import OpenAIEmbeddings, OpenAI
 from langchain.chains import RetrievalQA
 
 # Configure logging
@@ -36,9 +35,9 @@ class PipelineConfig:
     
     pdf_path: str
     openai_api_key: str
-    chunk_size: int = 1000
-    chunk_overlap: int = 200
-    max_tokens: int = 4000
+    chunk_size: int = 800
+    chunk_overlap: int = 100
+    max_tokens: int = 2000
     temperature: float = 0.1
     vector_store_path: Optional[str] = None
 
@@ -52,7 +51,8 @@ class PDFRetrievalTool(BaseTool):
     """
     
     name: str = "pdf_retrieval"
-    description: str = "Retrieves relevant content from PDF documents based on query"
+    description: str = "Search for information in PDF documents. Input should be a search query string."
+    retrieval_chain: Any = None
     
     def __init__(self, retrieval_chain: RetrievalQA):
         """Initialize the PDF retrieval tool with a retrieval chain."""
@@ -111,6 +111,11 @@ class CrewAIPDFPipeline:
         and sets up the retrieval chain for similarity search.
         """
         try:
+            # Validate PDF path exists
+            pdf_path = Path(self.config.pdf_path)
+            if not pdf_path.exists():
+                raise FileNotFoundError(f"PDF file not found: {self.config.pdf_path}")
+            
             # Load PDF document
             logger.info(f"Loading PDF from: {self.config.pdf_path}")
             loader = PyPDFLoader(self.config.pdf_path)
@@ -135,8 +140,9 @@ class CrewAIPDFPipeline:
             
             # Create retrieval chain
             llm = OpenAI(
+                model="gpt-3.5-turbo-instruct",
                 temperature=self.config.temperature,
-                max_tokens=self.config.max_tokens
+                max_tokens=2000  # Reduced to avoid token limit issues
             )
             self.retrieval_chain = RetrievalQA.from_chain_type(
                 llm=llm,
@@ -305,7 +311,7 @@ class CrewAIPDFPipeline:
                 agents=list(agents.values()),
                 tasks=tasks,
                 process=Process.sequential,
-                verbose=2
+                verbose=True
             )
             
             logger.info("CrewAI crew setup complete")
@@ -356,15 +362,32 @@ def main():
     This function shows how to configure and run the pipeline with
     a sample PDF document.
     """
-    # Example configuration
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="CrewAI PDF Processing Pipeline")
+    parser.add_argument("--pdf", required=True, help="Path to PDF file")
+    parser.add_argument("--api-key", help="OpenAI API key (or set OPENAI_API_KEY env var)")
+    parser.add_argument("--vector-store", default="./vector_store", help="Path to save vector store")
+    parser.add_argument("--chunk-size", type=int, default=800, help="Text chunk size (default: 800)")
+    parser.add_argument("--chunk-overlap", type=int, default=100, help="Text chunk overlap (default: 100)")
+    
+    args = parser.parse_args()
+    
+    # Get API key
+    api_key = args.api_key or os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        print("Error: OpenAI API key required (--api-key or OPENAI_API_KEY env var)")
+        return 1
+    
+    # Configure pipeline
     config = PipelineConfig(
-        pdf_path="path/to/your/document.pdf",
-        openai_api_key="your-openai-api-key",
-        chunk_size=1000,
-        chunk_overlap=200,
-        max_tokens=4000,
+        pdf_path=args.pdf,
+        openai_api_key=api_key,
+        chunk_size=args.chunk_size,
+        chunk_overlap=args.chunk_overlap,
+        max_tokens=2000,
         temperature=0.1,
-        vector_store_path="./vector_store"
+        vector_store_path=args.vector_store
     )
     
     # Initialize and run pipeline
@@ -373,12 +396,19 @@ def main():
     
     # Display results
     if results["status"] == "success":
-        print("Pipeline executed successfully!")
-        print("Results:", results["result"])
+        print("\n✅ Pipeline executed successfully!")
+        print("\n" + "="*80)
+        print("RESULTS")
+        print("="*80)
+        print(results["result"])
+        print("\n" + "="*80)
     else:
-        print("Pipeline execution failed:")
-        print("Error:", results["error"])
+        print(f"\n❌ Pipeline execution failed: {results['error']}")
+        return 1
+    
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    sys.exit(main())

@@ -1,0 +1,14 @@
+llama-index>=0.10.0
+llama-index-llms-openai
+llama-index-embeddings-openai
+llama-index-vector-stores-faiss
+llama-index-agent-openai
+llama-index-tools-wikipedia
+llama-index-tools-web
+faiss-cpu
+python-dotenv
+streamlit
+pandas
+numpy
+requests
+beautifulsoup4
